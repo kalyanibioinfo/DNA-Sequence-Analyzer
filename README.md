@@ -1,8 +1,5 @@
 # DNA-Sequence-Analyzer
 Beginner Bioinformatics Project in Python
-# DNA Sequence Analyzer
-
-A beginner bioinformatics project built using Python.
 
 ## Features
 - DNA Validation
