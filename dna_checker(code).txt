@@ -1,0 +1,105 @@
+print("=== DNA SEQUENCE ANALYZER ===")
+
+# Take DNA input
+dna = input("Enter DNA Sequence:")
+# convert to uppercase
+dna = dna.upper()
+# print DNA sequence
+print("DNA Sequence:", dna)
+# print DNA length
+print("DNA Length:", len(dna))
+# Base counters
+a_count = 0
+t_count  = 0
+g_count = 0
+c_count = 0
+
+# check valid DNA
+valid = True
+
+# count bases and validate DNA
+for base in dna:
+	if base == "A":
+		a_count += 1
+		
+	elif base == "T":
+		t_count += 1
+		
+	elif base == "G":
+		g_count += 1
+		
+	elif base == "C":
+		c_count += 1
+		
+	else:
+		valid = False
+
+# print base counts
+print("A Count:", a_count)
+print("T Count:", t_count)
+print("G Count:", g_count)
+print("C Count:", c_count)
+
+# calculate GC Content
+gc_content = ((g_count + c_count) / len(dna)) *100
+
+# print gc content
+print("GC Content:", round(gc_content, 2),  "%")
+
+# Reverse DNA Sequence
+reverse_dna = dna[:: -1]
+
+# print Reverse DNA
+print("Reverse DNA:", reverse_dna)
+
+# Generate Complement DNA
+complement_dna = ""
+for base in dna:
+	if base == "A":
+		complement_dna += "T"
+		
+	elif base == "T":
+		complement_dna += "A"
+		
+	elif base == "G":
+		complement_dna += "C"
+		
+	elif base == "C":
+		complement_dna += "G"
+		
+# print Complement DNA
+print("Complement DNA:", complement_dna)
+
+# generate reverse complement DNA
+reverse_complement = complement_dna [:: -1]
+
+#print reverse complement DNA
+print("Reverse Complement DNA:", reverse_complement)
+
+# generate RNA sequence
+rna = ""
+
+for base in dna:
+		if base == "A":
+			rna += "U"
+			
+		elif base == "T":
+			rna += "A"
+			
+		elif base == "G":
+			rna += "C"
+			
+		elif base == "C":
+			rna += "G"
+		
+# print RNA sequence
+print("RNA Sequence:", rna)
+		
+# print validation result
+if valid:
+	print("Valid DNA Sequence")
+
+else:
+	print("Invalid DNA Sequence")
+	
+print("\nAnalysis Complete!")
