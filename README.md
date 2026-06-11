@@ -1,4 +1,4 @@
-# DNA-Sequence-Analyzer.py
+# DNA-Sequence-Analyzer
 Beginner Bioinformatics Project in Python
 
 ## Features
